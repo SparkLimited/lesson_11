@@ -1,0 +1,642 @@
+/* Підключення шрифтів */
+
+/* Google Fonts (Plugin) */
+/* @import url("https://fonts.googleapis.com/css?family=Manrope:regular,500,600,700&display=swap"); */
+
+@import url("fonts.css");
+
+@import url("reset.css");
+
+@import url("button.css");
+
+/* * {
+	box-sizing: border-box;
+	outline: 1px solid red;
+} */
+
+/* ======================================================== */
+/* ================== Main Style ========================== */
+/* ======================================================== */
+:root {
+    color-scheme: dark;
+}
+
+body { 
+    font-family: "Gilroy", sans-serif;
+    line-height: 1.4;
+    background-color: hsl(240, 4%, 5%);
+    color: #fff;
+}
+
+
+[class*="__container"] {
+    max-width: 1432px;
+    margin-inline: auto;
+    padding-inline: 16px;
+}
+
+.title-name {
+    text-align: left;
+    margin-left: 30px;
+}
+
+.wrapper {
+    overflow: clip;
+    min-height: 100%;
+}
+.page {
+    padding: 30px;
+    height: 600px;
+}
+
+/*=========== Main Style ============= */ 
+
+.showbox__row {
+    text-align: center;
+    font-size: 0;
+    margin: 0 -12px -8px;
+}
+
+.showbox__columns {
+    text-align: start;
+    font-size: 16px;
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 12px 8px;
+    width: 237px;
+}
+
+:where(p, ol, ul, dl, .block__showcase, .block__scene, dd):not(:last-child) {
+    margin-bottom: 1em;
+}
+
+.block :where(h1, h2, h3, h4, h5, h6) {
+    font-weight: 700;
+}
+
+.block :where(h1, h2, h3, h4, h5, h6):not(:last-child) {
+    margin-bottom: 1em;
+}
+
+.block h1 {
+    font-size: 48px;
+}
+
+.block h2 {
+    font-size: 32px;
+}
+
+.block h3 {
+    font-size: 24px;
+}
+
+.block h4 {
+    font-size: 18px;
+}
+
+.block ul,
+.block ol {
+    padding-left: 20px;
+}
+
+.block li {
+    list-style: unset;
+}
+
+.block li:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.block code {
+    background: hsl(44deg 6% 50% / 30%);
+    color: hsl(145deg 32% 47%);
+    border-radius: 4px;
+    font-size: 85%;
+    padding: 3px 7px;
+    font-weight: 600;
+}
+
+.block__container {
+    padding-block: 32px;
+}
+
+.block__section:not(:last-child) {
+    padding-top: 32px;
+    margin-bottom: 24px;
+}
+
+.title-name,
+.card__title,
+.block__section {
+    text-align: center;
+}
+
+/* ========== 2D ========== */
+.box {
+    border: 1px solid hsl(249deg 11% 44%);
+    padding: 16px;
+    text-align: center;
+}
+
+.box > :not(:last-child) {
+    margin-bottom: 12px;
+}
+
+.box__object {
+    height: 176px;
+    line-height: 176px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: hsl(47, 86%, 47%);
+    border-radius: 8px;
+    box-shadow: 0 0 100px 20px hsl(59, 93%, 48%);
+    transition: transform 0.5s ease-in-out;
+}
+
+.box--rotate:hover .box__object {
+    transform: rotate(45deg);
+}
+
+.box--rotateX:hover .box__object {
+    transform: rotateX(90deg);
+}
+
+.box--rotateY:hover .box__object {
+    transform: rotateY(90deg);
+}
+
+.box--translate-right:hover .box__object {
+    transform: translate(40px);
+}
+
+.box--translate-down:hover .box__object {
+    transform: translate(20px, 20px);
+}
+
+.box--translate-up:hover .box__object {
+    transform: translateY(-20px);
+}
+
+.box--matrix:hover .box__object {
+    transform: matrix(-0.28, 1.54, -1.23, -0.53, -40, -40);
+}
+
+.box--matrix-all:hover .box__object {
+    transform: matrix(1.2, .25, .25, 1.2, 22, 33);
+}
+
+.box--scale:hover .box__object {
+    transform: scale(1.3);
+}
+
+.box--scaleX:hover .box__object {
+    transform: scaleX(0.5);
+}
+
+.box--scaleXX:hover .box__object {
+    transform: scaleX(1.5);
+}
+
+.box--scaleY:hover .box__object {
+    transform: scaleY(1.8);
+}
+
+.box--skew:hover .box__object {
+    transform: skew(60deg, 60deg);
+}
+
+.box--skewX:hover .box__object {
+    transform: skewX(60deg);
+}
+
+.box--skewY:hover .box__object {
+    transform: skewY(60deg);
+}
+
+.box--skew-rad:hover .box__object {
+    transform: skew(.4rad, .4rad);
+}
+
+.box--origin-rotate:hover .box__object {
+    transform-origin: left top;
+    transform: rotate(-45deg);
+}
+
+.box--origin-skew:hover .box__object {
+    transform-origin: left;
+    transform: skewY(-20deg);
+}
+
+.box--origin-translate:hover .box__object {
+    transform-origin: left;
+    transform: translate(20px, 30px);
+}
+
+.box--trid {
+    perspective: 600px;
+    perspective-origin: top;
+}
+
+.box--trid-translate:hover .box__object {
+    transform: translate3d(20px, 20px, 50px);
+}
+
+.box--trid-rotate:hover .box__object {
+    transform: rotate3d(4, 2, 1, 90deg);
+}
+
+.box--trid-translate-style {
+    transform-style: preserve-3d;
+    font-size: 0;
+}
+
+.box--trid-translate-style:hover {
+    font-size: 30px;
+}
+
+.box--trid-transform-style:hover .box__object {
+    transform: rotate3d(1, 0, 0, 90deg);
+}
+
+/* ================================================================
+================== Backface visibility ============================
+================================================================ */
+
+
+.card {
+    padding: 60px;
+}
+
+.card__body {
+    position: relative;
+    width: 200px;
+    perspective: 800px;
+}
+
+.card__body img {
+    width: 100%;
+}
+
+.card__front,
+.card__back {
+    transition: all .3s;
+}
+
+.card__front {
+    transform: rotateY(0deg);
+    backface-visibility: hidden;
+}
+
+.card__back {
+    position: absolute;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    top: 0;
+    left: 0;
+}
+
+.card__body:hover .card__front {
+    transform: rotateY(-180deg);
+}
+
+.card__body:hover .card__back {
+    transform: rotateY(0deg);
+}
+
+
+
+/* ==============================================
+===================== Animation car =============
+================================================ */
+
+.container { 
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.car {
+    width: 800px;
+    margin: 0 auto;
+    position: relative;
+    font-size: 0;
+    z-index: 2;
+}
+
+/* Дах */
+.car__roof {
+    width: 325px;
+    height: 10px;
+    background: linear-gradient(to bottom, hsl(35, 95%, 47%), hsl(37, 96%, 40%));
+    margin-left: 247px;
+    border-radius: 30px 30px 0 0;
+}
+
+/* Вікна */
+.car__windows {
+    text-align: center;
+    padding: 0 10px;
+}
+
+.car__front-glass,
+.car__window,
+.car__rear-glass {
+    display: inline-block;
+    height: 65px;
+    vertical-align: bottom;
+    background: linear-gradient(to bottom, #a9c3d3, #6e8a99);
+    border: 3px solid #c63;
+    box-shadow: inset -3px -3px 5px rgba(0,0,0,0.2);
+}
+
+.car__front-glass {
+    width: 85px; 
+    transform: skew(-20deg) translateX(-5px); 
+    transform-origin: left bottom;
+    border-radius: 5px 0 0 0;
+    margin-right: -5px; 
+}
+
+.car__front-glass::after {
+    content: "";
+    position: absolute;
+    inset: 2px 2px 55% 2px;
+    background: linear-gradient(to bottom, rgba(234, 35, 4, 0.25), transparent);
+    pointer-events: none;
+}
+
+.car__window {
+    width: 130px;
+}
+
+.car__rear-glass {
+    border-radius: 0 5px 0 0;
+}
+
+/* Передня частина */
+.car__front {
+    width: 100px;
+    height: 85px;
+    background: #c63;
+    border: 3px solid black;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    left: 90px;
+    top: 7px;
+    border-top-left-radius: 100px 16px;
+    border-top-right-radius: 100px 16px;
+    z-index: 5;
+}
+
+.car__wing {
+    width: 120px;
+    height: 94px;
+    background: #c63;
+    border: 3px solid black;
+    display: inline-block;
+    vertical-align: top;
+    border-top-left-radius: 100px 16px;
+    position: absolute;
+    left: 188px;
+    bottom: -2px;
+    z-index: 5;
+}
+
+.car__bonnet {
+    width: 123px;
+    height: 94px;
+    background: #c63;
+    border: 3px solid black;
+    display: inline-block;
+    vertical-align: top;
+    position: absolute;
+    left: 188px;
+    bottom: 0px;
+    border-top-left-radius: 100px 16px;
+    transform: translate(-89px);
+}
+
+.car__grille {
+    width: 60px;
+    height: 15px;
+    background: #222;
+    margin: 5px auto;
+    border-radius: 3px;
+}
+
+.car__headlights {
+    text-align: center;
+}
+
+.car__light {
+    width: 40px;
+    height: 20px;
+    border-radius: 7px;
+    border: 1px solid black;
+    display: inline-block;
+    margin: 5px 3px;
+    background: linear-gradient(to bottom, hsl(57, 62%, 80%), hsl(64, 74%, 78%));
+    box-shadow: 
+        0 0 30px 10px rgba(0, 200, 255, 0.5),
+        0 0 80px 30px rgba(0, 200, 255, 0.3),
+        0 0 150px 60px rgba(0, 150, 255, 0.2);
+    position: relative;
+}
+
+.car__light::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, rgba(0, 200, 255, 0.4) 0%, rgba(0, 150, 255, 0) 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.car__fog-lights {
+    text-align: center;
+    margin-top: 5px;
+}
+.car__fog {
+    width: 30px;
+    height: 15px;
+    background: yellow;
+    border-radius: 20%;
+    box-shadow: 0 0 10px 4px rgba(255, 255, 150, 0.7);
+    border: 1px solid black;
+    display: inline-block;
+    margin: 0 5px;
+}
+
+/* Двері */
+.car__door {
+    display: inline-block;
+    height: 90px;
+    width: 150px;
+    background: linear-gradient(to bottom, hsl(13, 70%, 50%), hsl(13, 70%, 40%));
+    position: relative;
+    left: 160px;
+    vertical-align: top;
+    border-left: 2px solid #201d1d;
+    margin: 0 15px;
+    transform: translateX(10px);
+}
+
+.car__door--rear {
+    width: 132px;
+    left: 130px;
+}
+.car__door:first-of-type {
+    border-left: none;
+}
+.car__handle {
+    width: 30px;
+    height: 6px;
+    background: #0b0b0b;
+    border-radius: 3px;
+    position: absolute;
+    top: 35%;
+    left: 68%;
+}
+
+/* Задня частина */
+.rear {
+    display: inline-block;
+    width: 170px;
+    height: 90px;
+    background: #c63;
+    border-left: 3px solid black;
+    border-top-right-radius: 18px 36px;
+    position: relative;
+    left: 125px;
+    z-index: 5;
+}
+.rear__car-light {
+    width: 15px;
+    height: 40px;
+    background: red;
+    border: 2px solid black;
+    border-radius: 20%;
+    box-shadow: 0 0 15px 4px rgba(255,0,0,0.6);
+    position: absolute;
+    right: -10px;
+    top: 20px;
+}
+
+/* Арки */
+.car__arc {
+    width: 100px;
+    height: 50px;
+    border: 5px solid black;
+    border-radius: 50px 50px 0 0;
+    position: absolute; 
+    bottom: 0;
+    background: #c63;
+    z-index: 5;
+}
+.car__arc--front {
+    left: 198px;
+}
+.car__arc--rear {
+    right: 80px;
+}
+
+/* Колеса */
+.car__wheels {
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    width: 100%;
+}
+.car__wheel {
+    width: 90px;
+    height: 90px;
+    background: radial-gradient(hsl(358deg 58% 39%), hsl(359deg 68% 49%));
+    border-radius: 50%;
+    background: repeating-conic-gradient(
+        hsl(52, 99%, 49%) 0 14deg,
+        hsl(212deg 9% 50%) 14deg 17deg
+    )
+    content-box,
+    hsl(0deg 0% 20%);
+    border: 20px solid rgb(0, 0, 0);
+    position: absolute;
+}
+.car__wheel--front {
+    position: absolute;
+    top: -60px;
+    left: 202px;
+    z-index: 5;
+}
+
+.car__wheel--front-back {
+    bottom: -15px;
+    left: 155px;
+    opacity: 1;
+    z-index: 4;
+}
+
+.car__wheel--rear {
+    position: absolute;
+    top: -60px;
+    right: 85px;
+    z-index: 5;
+}
+
+.car__wheel--rear-back {
+    bottom: -15px;
+    right: 120px;
+    opacity: 1;
+    z-index: 4;
+}
+
+.road {
+    width: 100%;
+    height: 120px;
+    background: #555;
+    position: relative;
+    margin-top: -40px;
+    z-index: 1;
+}
+
+.road__line {
+    width: 100%;
+    height: 6px;
+    background: repeating-linear-gradient(
+        to right,
+        #fff 0 40px,
+        transparent 40px 80px
+    );
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* =============================================================
+=================== Footer =====================================
+================================================================ */
+
+.footer {
+    padding: 20px 0px 20px 0px;
+}
+
+.footer__content {
+    border: 2px solid #f3bb04;
+    border-radius: 10px;
+    background: #fbf3f3;
+    color: #d804f8;
+    padding: 25px;
+    box-shadow: 5px 5px 5px #fb0000;
+    text-align: left;
+    font-size: 25px;
+    line-height: 1.2;
+}
+
+
+
